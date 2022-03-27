@@ -5,25 +5,26 @@
     <title>Начальная страница блога</title>
 </head>
 <body>
+
     <header>
 
+    <div class="first">
 
+        <h2><a href="{% url 'post_detail' %}">Все посты</a></h2>
 
-        <h1>Название поста</h1>
-        <h2> {{ post_title }} </h2>
+    </div>
+
+    <div>
+
+        <h1>Название поста: {{ post_title }} </h1>
 
 
         <h1>Текст поста</h1>
-        <h2> {{ post_text }} </h2>
-
-
-        <h1>Id поста</h1>
-        <h2> {{ post_id }} </h2>
-
+        <h2> {{ post_text|linebreaksbr }} </h2>
 
         <h1>Дата создания</h1>
         <h2> {{ post_data }} </h2>
-
+    </div>
 
     </header>
 </body>
