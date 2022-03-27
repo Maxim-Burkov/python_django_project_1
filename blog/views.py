@@ -12,7 +12,7 @@ def post_list(request):
 
 
     posts = Post.objects.all()
-    last_post_id = len(posts) - 1
+    last_post_id = len(posts)
 
     post_id = last_post_id
     post_title = posts[last_post_id].title
@@ -32,7 +32,7 @@ def all_post_list(request):
 
     for i in range(len(posts)):
 
-        last_post_id = len(posts) - 1
+        last_post_id = len(posts)
 
         post_id = last_post_id
         post_title = posts[last_post_id].title
